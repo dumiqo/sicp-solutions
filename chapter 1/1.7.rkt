@@ -13,9 +13,9 @@
   (/ (+ x y) 2))
 
 (define (good-enough? guess x)
-  (< (percent-of x guess)) 0.01)
+  (< (percent-of x(abs (- (square guess) x))) 0.000001))
 
 (define (percent-of x y)
-  (/ (/ x 100.0) y))
+  (/ y (/ x 100.0) ))
 
 (define (sqr x) (sqrt-iter 1.0 x))
