@@ -12,7 +12,7 @@
   (/ (+ (/ x (square y)) (* 2 y)) 3))
 
 (define (good-enough? guess x)
-  (< (percent-of x (abs (- (cubic guess) x))) 1))
+  (< (percent-of x (abs (- (cubic guess) x))) 0.0001))
 
 (define (percent-of x y)
   (/ y (/ x 100.0) ))
